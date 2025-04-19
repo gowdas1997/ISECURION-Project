@@ -61,8 +61,8 @@ The `setup.sh` script is designed to automate the installation and configuration
      configmap.yaml: Mounts configuration settings as environment variables inside the container.
 
 4. Monitoring with Docker Compose and Helm
-      1. Set up Docker Compose:
-     We use Docker Compose to run the web application alongside Node Exporter for monitoring system metrics (CPU, memory, disk usage).
+   1. Set up Docker Compose:
+   We use Docker Compose to run the web application alongside Node Exporter for monitoring system metrics (CPU, memory, disk usage).
 
 
 5. Challenges:
