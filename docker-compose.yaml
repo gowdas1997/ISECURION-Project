@@ -1,0 +1,14 @@
+version: "3"
+services:
+  web-app:
+    image: gowdas1997/assign-image  # <-- use your own built image here
+    container_name: assign1
+    ports:
+      - "8082:80"  # Map container port 80 to host 8081
+
+  node-exporter:
+    image: quay.io/prometheus/node-exporter:latest
+    container_name: node-exporter
+    ports:
+      - "9100:9100"
+
