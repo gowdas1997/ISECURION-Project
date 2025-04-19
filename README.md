@@ -31,13 +31,13 @@ The `setup.sh` script is designed to automate the installation and configuration
 - **Creates a new user (`myuser`)** with non root user .
 - **Configures UFW firewall** to allow only essential ports: 22 (SSH), 80 (HTTP), and 443 (HTTPS).
 - **Sets up a cron job** to clean the `/tmp` directory every 6 hours.Kubernetes YAML Files
-To deploy the Dockerized application to Kubernetes, the following YAML files have been created:
+   To deploy the Dockerized application to Kubernetes, the following YAML files have been created:
 
-deployment.yaml: Deploys the Docker container with a single replica.
+   deployment.yaml: Deploys the Docker container with a single replica.
 
-service.yaml: Exposes the deployed application via a NodePort service.
+   service.yaml: Exposes the deployed application via a NodePort service.
 
-configmap.yaml: Mounts configuration settings as environment variables inside the container.
+   configmap.yaml: Mounts configuration settings as environment variables inside the container.
 
 #### Steps to run the setup script:
 1. Clone the repository to your local machine:
@@ -45,24 +45,24 @@ configmap.yaml: Mounts configuration settings as environment variables inside th
    git clone https://github.com/yourusername/ISECURION-Project.git
    cd ISECURION-Project
 
-2. Dockerize the HTTP Server
-  A Docker image is built based on a Debian distribution that runs a simple HTTP server (Nginx or Python HTTP server) with a custom index.html file.
+2.   Dockerize the HTTP Server
+     A Docker image is built based on a Debian distribution that runs a simple HTTP server (Nginx or Python HTTP server) with a custom index.html file.
 
-  Steps to create and run the Docker image:
-  Build Docker Image: The Docker image uses a Debian-based base image and installs the necessary web server.
+     Steps to create and run the Docker image:
+     Build Docker Image: The Docker image uses a Debian-based base image and installs the necessary web server.
 
 3. Kubernetes YAML Files
-  To deploy the Dockerized application to Kubernetes, the following YAML files have been created:
+     To deploy the Dockerized application to Kubernetes, the following YAML files have been created:
 
-  deployment.yaml: Deploys the Docker container with a single replica.
+     deployment.yaml: Deploys the Docker container with a single replica.
 
-  service.yaml: Exposes the deployed application via a NodePort service.
+     service.yaml: Exposes the deployed application via a NodePort service.
 
-  configmap.yaml: Mounts configuration settings as environment variables inside the container.
+     configmap.yaml: Mounts configuration settings as environment variables inside the container.
 
 4. Monitoring with Docker Compose and Helm
-   1. Set up Docker Compose:
-  We use Docker Compose to run the web application alongside Node Exporter for monitoring system metrics (CPU, memory, disk usage).
+      1. Set up Docker Compose:
+     We use Docker Compose to run the web application alongside Node Exporter for monitoring system metrics (CPU, memory, disk usage).
 
 
 5. Challenges:
