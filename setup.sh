@@ -3,7 +3,7 @@
 echo "[+] Updating the system..."
 sudo apt update && sudo apt upgrade -y
 
-echo "[+] Installing Docker, kubectl (using Snap), and htop..."
+
 sudo apt install -y docker.io htop snapd
 
 echo "[+] Installing minikube, kubectl"
@@ -34,8 +34,7 @@ minikube version
 
 minikube start --driver=docker
 
-# If you encounter root privileges error, run:like this error (
-#❌  Exiting due to DRV_AS_ROOT: The "docker" driver should not be used with root privileges.)
+
 
 minikube start --driver=docker --force
 
