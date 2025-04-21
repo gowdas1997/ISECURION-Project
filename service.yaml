@@ -4,10 +4,10 @@ metadata:
   name: web-app-service
 spec:
   selector:
-    app: web-app  # This should match the label in your deployment
+    app: web-app  
   ports:
     - protocol: TCP
-      port: 80        # The port exposed inside the cluster
-      targetPort: 80   # The container port
-      nodePort: 30080  # NodePort that exposes the service externally
+      port: 80        
+      targetPort: 80   
+      nodePort: 30080  
   type: NodePort
